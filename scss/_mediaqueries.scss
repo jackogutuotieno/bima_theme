@@ -1,0 +1,134 @@
+@media (max-width: 1310px) {
+    .hero-slider figure figcaption {
+        padding-left: 12rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .admn-panel .left-col {
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+@media (max-width: 1140px) {
+    .hero-slider .owl-dots {
+        position: relative;
+        width: 100%;
+        display: inline-block;
+        padding: 1rem 0;
+    }
+    .hero-slider figure figcaption {
+        padding-left: 2rem;
+    }
+    .hero-slider figure figcaption {
+        width: 35%;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-slider figure figcaption {
+        position: relative;
+        width: 100%;
+        padding: 1rem;
+    }
+    /* .header-admin .dropdown-menu {
+        min-width: 100%;
+    } */
+    form.pr-3 {
+        padding-right: 0 !important;
+    }
+    .row.m-0.pl-3 {
+        padding-right: 15px;
+    }
+    .row.pr-3 {
+        padding-right: 0 !important;
+    }
+    .cnt-btn-group {
+        @include justify-content(center);
+    }
+    .cont-inner-wrap {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .dashboard-panels .title-block--6 {
+        text-align: center;
+    }
+    .admn-panel .left-col .side-bar-menu {
+        display: none;
+    }
+    #about {
+        margin: 0;
+    }
+    .center-text-width--50 {
+        width: 100%;
+    }
+    .title-wrap {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+        transform: none;
+        .line-title {
+            &:after {
+                display: block;
+                width: 30px;
+                margin: .5rem auto;
+                position: relative;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .mid-cont-wrap .gq .right-col p {
+        text-align: center;
+    }
+    .mid-cont-wrap .gq {
+        text-align: center;
+    }
+    #consultation .left-col .text-wrap {
+        max-width: 100%;
+        margin: auto;
+        padding: 2rem;
+    }
+    .mid-cont-wrap .right-col .text-wrap {
+        text-align: left;
+    }
+    .mid-cont-wrap .right-col .text-wrap .line-30{
+        margin: 1.5rem 0;
+    }
+    footer h2,
+    footer .form-group {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .title-block--5.pl-3 {
+        padding-left: 0 !important;
+    }
+    #who-we-are .title-wrap {
+        margin-left: 0;
+    }
+    footer .top-wrap {
+        padding: 1rem !important;
+    }
+    .btnSubmit {
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    #services .tab-content .left-col figure img.pic-two {
+        display: none;
+    }
+    #services .tab-content .left-col figure {
+        position: relative;
+        max-width: 100%;
+    }
+    #services .tab-content .left-col figure img.pic-one {
+        position: relative;
+        top: 0;
+        width: 100%;
+        border: none;
+    }
+}

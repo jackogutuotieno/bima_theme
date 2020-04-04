@@ -1,0 +1,136 @@
+body, html{
+  height: 100%;
+}
+
+section {
+  position: relative;
+}
+
+*a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  &:focus {
+    outline: none;
+  }
+}
+
+.sec-padding {
+  padding: 3rem 0;
+}
+
+table {
+  td {
+    font-family: $lato-medium;
+    font-size: .9rem;
+  }
+}
+
+.title-wrap {
+  position: absolute;
+  margin-top: 3rem;
+  @include transform(rotate(-90deg));
+  margin-left: -20px;
+  display: inline-block;
+  z-index: 2;
+  .line-title {
+      font-family: $lato-regular;
+      font-size: 1.5rem;
+      color: $bima-light-grey;
+      &:after {
+          content: '';
+          display: inline-block;
+          width: 100px;
+          height: 1px;
+          background: $bima-lime-green;
+          margin-left: .3rem;
+          position: relative;
+          top: -4px;
+          left: 2rem;
+      }
+  }
+}
+
+.center-text-width--50 {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.line-30 {
+  width: 30px;
+  height: 2px;
+  background: $bima-lime-green;
+  margin: 1.5rem auto;
+}
+
+.cnt-btn-group {
+  @include flexbox;
+  @include justify-content(flex-end);
+  .btn {
+    background: $bima-lime-green;
+    &.line--type {
+      border: 1px solid $bima-lime-green;
+      color: $bima-lime-green;
+      background: $transparent;
+      &:hover {
+        background: $bima-lime-green;
+        color: $color-white;
+      }
+    }
+  }
+}
+
+.card {
+  .card-header {
+    h5 {
+      a {
+        @include transition (all, .3s, ease-in-out);
+        &:hover {
+          color: $bima-lime-green !important;
+          text-decoration: none;
+        }
+        &[aria-expanded="false"] {
+          &:before {  
+            float: right;
+          }
+        }
+        &[aria-expanded="true"] {
+          &:before {  
+            float: right;
+          }
+        }
+        &[aria-expanded="false"] {
+          &:before {  
+            font-family: 'Font Awesome 5 Free';
+            content: '\f078';
+            font-weight: 900;
+            font-size: 1rem;
+            color: rgba($color: $color-black, $alpha: .7);
+          }
+        }
+        &[aria-expanded="true"] {
+          &:before {
+            font-family: 'Font Awesome 5 Free';
+            content: '\f077';
+            font-weight: 900;
+            font-size: 1rem;
+            color: rgba($color: $color-black, $alpha: .7);
+          }
+        }
+      }
+    }
+  }
+}
+
+.edit-btn {
+  border-radius: 0 !important;
+  min-width: 100px !important;
+  position: absolute;
+  top: 23px;
+  right: -14px;
+}

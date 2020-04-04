@@ -1,0 +1,65 @@
+body {
+    font-family: $lato-regular;
+}
+
+p, li, strong, cite {
+    font-family: $lato-regular;
+}
+
+p {
+    font-size: 1rem;
+    color: $bima-dark-grey;
+    margin-bottom: 1rem;
+    line-height: 1.4rem;
+}
+
+.title-block--1 {
+    font-size: 1.2rem;
+    color: $bima-dark-grey;
+}
+
+.title-block--2 {
+    font-family: $lato-bold;
+    font-size: 2.3rem;
+    color: $bima-lime-green;
+    margin-top: .5rem;
+    &:after {
+        content: '';
+        display: block;
+        width: 30px;
+        height: 2px;
+        background: $bima-lime-green;
+        margin: 1rem 0;
+    }
+}
+
+.title-block--3 {
+    @extend .title-block--2;
+    &:after {
+        display: none;
+    }
+}
+
+.title-block--4 {
+    font-family: $lato-bold;
+    font-size: 1.2rem;
+    color: $bima-navy-blue;
+    margin-bottom: 1rem;
+}
+
+.title-block--5 {
+    @extend .title-block--4;
+    color: $color-white;
+    font-size: 1.5rem;
+}
+
+.title-block--6 {
+    font-family: $lato-bold;
+    font-size: 1rem;
+    margin: .3rem 0;
+}
+
+.title-block--7 {
+    font-family: $lato-bold;
+    font-size: 1.1rem;
+}

@@ -1,0 +1,21 @@
+footer {
+    background-color: lighten($color: $bima-navy-blue, $amount: 7%);
+    form {
+        .form-control {
+            font-size: .85rem;
+            &:hover, &:focus {
+                border-color: inherit;
+                box-shadow: none;
+            }
+        }
+    }
+    .btm-wrap {
+        border-top-color: rgba($color: $color-white, $alpha: .3);
+        p {
+            font-size: .85rem;
+            a {
+                color: $bima-lime-green;
+            }
+        }
+    }
+}

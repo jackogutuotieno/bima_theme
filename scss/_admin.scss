@@ -1,0 +1,460 @@
+.admin-page {
+    background: lighten($color: $color-black, $amount: 90%);
+}
+
+.header-admin {
+    background: $color-white;
+    padding: 1rem 0 !important;
+    li {
+        a {
+            font-family: $lato-bold;
+            font-size: .82rem;
+            text-transform: uppercase;
+        }
+    }
+    .dropdown-menu {
+        left: auto;
+        right: 100%;
+        min-width: 30rem;
+        z-index: 4;
+    }
+    .notify-toggle {
+        &:hover, &:focus {
+            border: $transparent;
+            box-shadow: none;
+        }
+        i {
+            position: relative;
+            top: auto;
+            left: auto;
+            right: auto;
+            color: $bima-lime-green;
+        }
+    }
+}
+
+.title-header {
+    background: $color-white;
+    margin: 1rem 0;
+    padding: 2rem;
+    font-size: 1.7rem;
+    border-radius: .2rem;
+    .nav-tabs {
+        &.btn-tabs {
+            .nav-link {
+                border-radius: 3rem;
+                border: 2px solid;
+                background: $transparent;
+                margin-right: 1rem;
+                &.active, &:hover {
+                    box-shadow: none;
+                    transform: none;
+                }
+                &.type-1 {
+                    border-color: rgba($color: $color-black, $alpha: .3);
+                    color: rgba($color: $color-black, $alpha: .3);
+                }
+                &.type-2 {
+                    border-color: $bima-lime-green;
+                    color: $bima-lime-green;
+                }
+            }
+        }
+    }
+}
+
+.btn-info {
+    border-radius: 3rem;
+    font-size: .85rem;
+    @include transform(none);
+}
+
+.splash-msg {
+    .text-wrap {
+        border: 3px solid $bima-lime-green;
+        margin: 2rem;
+        padding: 2rem;
+        height: calc(100% - 4rem);
+        @include flexbox;
+        @include flex-direction(column);
+        @include justify-content(center);
+        text-align: center;
+        h3 {
+            font-family: $lato-bold;
+            color: $bima-lime-green;
+            font-size: 2rem;
+            &:after {
+                content: '';
+                display: block;
+                width: 30px;
+                height: 1px;
+                background: $bima-lime-green;
+                margin: 1rem auto;
+            }
+        }
+        p {
+            font-family: $lato-bold;
+            font-size: .7rem;
+            color: $bima-lime-green;
+        }
+    }
+}
+.admn-panel {
+    height: 100vh;
+    .left-col {
+        background-color: lighten($color: $bima-admin-sidemenu, $amount: 10%);
+        .user-wrap {
+            background: $bima-admin-sidemenu;
+            padding: 1rem;
+            text-align: center;
+            .fa-user-circle {
+                font-size: 2rem;
+                color: lighten($color: $color-black, $amount: 90%);
+                border: 2ps solid $color-white;
+                @include border-radius(50%);
+            }
+            h2 {
+                font-family: $lato-bold;
+                font-size: 1.1rem;
+                color: $color-white;
+            }
+            p {
+                font-family: $lato-regular;
+                font-size: .85rem;
+                a {
+                    text-decoration: none;
+                    color: $color-white;
+                    @include transition(all, .3s, ease-in-out);
+                    &:hover {
+                        color: $bima-lime-green;
+                    }
+                }
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    margin-right: .8rem;
+                    a {
+                        font-size: .85rem;
+                        color: $bima-lime-green;
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+        .side-bar-menu {
+            padding: 2rem 0 0 2rem;
+            ul {
+                margin-bottom: 1rem;
+                h3 {
+                    font-family: $lato-regular;
+                    font-size: .83rem;
+                    color: $color-white;
+                    text-transform: uppercase;
+                    margin-bottom: 1.5rem;
+                }
+                li {
+                    margin: 1rem 0 1rem 1rem;
+                    padding: .5rem;
+                    border-bottom-left-radius: 1rem;
+                    border-top-left-radius: 1rem;
+                    @include transition (all, .3s, ease-in-out);
+                    a {
+                        font-family: $lato-regular;
+                        font-size: .83rem;
+                        color: $color-white;
+                        text-transform: uppercase;
+                        &:hover {
+                            text-decoration: none;
+                        }
+                        i {
+                            margin-right: .4rem;
+                        }
+                    }
+                    &:hover {
+                        background-color: $bima-admin-sidemenu;
+                        padding: .5rem;
+                        border-bottom-left-radius: 1rem;
+                        border-top-left-radius: 1rem;
+                    }
+                    &.active {
+                        background-color: $bima-admin-sidemenu;
+                        padding: .5rem;
+                        border-bottom-left-radius: 1rem;
+                        border-top-left-radius: 1rem;
+                    }
+                }
+            }
+        }
+    }
+    .dashboard-panels {
+        .nav-tabs {
+            margin: 1rem;
+            li {
+                a {
+                    margin: 0;
+                    @include border-radius(0);
+                    @include transition(all, .3s, ease-in-out);
+                    &.active, &:hover {
+                        position: relative;
+                        z-index: 2;
+                        @include transform(scale(1.1));
+                        @include box_shadow(3);
+                    }
+                }
+            }
+        }
+        .tab-content {
+            .card {
+                i {
+                    display: block;
+                    float: left;
+                    font-size: 1.2rem;
+                    border: 1px solid $bima-lime-green;
+                    color: $bima-lime-green;
+                    margin-bottom: 5rem;
+                    padding: .3rem;
+                    border-radius: 50%;
+                    margin-right: 1rem;
+                }
+                h4 {
+                    font-family: $lato-bold;
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: .8rem;
+                    line-height: 1rem;
+                }
+            }
+        }
+        .notifications-wrap {
+            height: calc(100% - 12px);
+            ul {
+                @include flexbox;
+                @include flex-direction(column);
+                height: 100%;
+                padding: .5rem;
+                li {
+                    border-bottom: 1px solid rgba($color: $color-black, $alpha: .2);
+                    padding: .5rem 0 0 0;
+                    margin-bottom: 1rem;
+                    i {
+                        float: left;
+                        color: $bima-lime-green;
+                        display: block;
+                        margin: 1rem;
+                        margin-bottom: 2rem;
+                        padding: 0 1rem;
+                        font-size: 1.2rem;
+                        &.fa-times-circle {
+                            color: $bima-danger;
+                        }
+                    }
+                    h3 {
+                        font-family: $lato-medium;
+                        font-size: 1rem;
+                    }
+                    p {
+                        margin: .1rem 0;
+                        font-size: .85rem !important;
+                        line-height: 1rem;
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+        .claims-list {
+            li {
+                text-align: center;
+                padding: 1rem;
+                border-top: 4px solid $bima-lime-green;
+                border-right: 1px solid rgba($color: $color-black, $alpha: .2);
+                h4 {
+                    font-family: $lato-medium;
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    margin-bottom: .5rem;
+                }
+                p {
+                    font-size: .82rem;
+                    margin: .1rem 0;
+                    line-height: 1rem;
+                }
+                &:nth-child(2) {
+                    border-top-color: $bima-admin-sidemenu;
+                }
+                &:last-child {
+                    border-top-color: $bima-danger;
+                    border-right: none;
+                }
+            }
+        }
+    }
+}
+
+
+ .filepond--drop-label {
+	color: #4c4e53;
+}
+
+.filepond--label-action {
+	text-decoration-color: #babdc0;
+}
+
+.filepond--panel-root {
+	border-radius: 2em;
+	background-color: #edf0f4;
+	height: 1em;
+}
+
+.filepond--item-panel {
+	background-color: #595e68;
+}
+
+.filepond--drop-label {
+    background-color: $color-white;
+}
+
+.filepond--drip-blob {
+	background-color: #7f8a9a;
+}
+
+.policy-type {
+    label {
+        display: block;
+        font-size: .9rem;
+        font-family: $lato-medium;
+        margin: .5rem;
+        &.form-check-label {
+            position: relative;
+            top: -10px;
+        }
+    }
+}
+
+.policy-select {
+    label {
+        @include flexbox;
+        margin: 1rem 0;
+        input {
+            margin-left: .5rem;
+        }
+    }
+}
+
+.benefits {
+    label {
+        &.form-check-label {
+            position: relative;
+            top: 0;
+        }
+    }
+}
+
+.box,
+.table-alt {
+    img {
+        max-width: 110px;
+    }
+    table {
+        font-family: $lato-regular;
+        text-align: center;
+        td {
+            width: 33%;
+            font-size: 1rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.table td, .table th {
+    vertical-align: middle !important;
+}
+
+.cont-inner {
+    .card {
+        border: none;
+        .card-header {
+            border: none;
+            background-color: $color-white;
+            h5 {
+                a {
+                    font-size: 1rem;
+                    color: $color-black;
+                }
+            }
+        }
+        .card-body {
+            font-size: 1rem;
+        }
+    }
+}
+
+.sumTotal {
+    p {
+        margin: 0;
+        font-family: $lato-medium;
+        font-size: .9rem;
+        color: lighten($color: $color-black, $amount: 20%) !important;
+    }
+}
+
+#payOptions {
+    .side-bar {
+        background: rgba($color: $color-black, $alpha: .02);
+    }
+    .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        background: $transparent;
+        color: $bima-orange;
+    }
+    .nav-pills .nav-link.active:after {
+        content: '\f0d9';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: $bima-orange;
+        position: absolute;
+        right: 0;
+    }
+    .nav-pills .nav-link {
+        font-size: .85rem;
+        font-family: $lato-bold;
+        color: rgba($color: $color-black, $alpha: .8);
+    }
+    .nav-pills .nav-item {
+        border-bottom: 1px solid rgba($color: $color-black, $alpha: .2);
+        padding: .5rem 0;
+    }
+}
+
+.payment-options {
+    .header {
+        border-bottom: 1px solid rgba($color: $color-black, $alpha: .1);
+        figure {
+            img {
+                float: left;
+                max-width: 100px;
+                max-height: 70px;
+            }
+            figcaption {
+                p {
+                    font-size: .85rem;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    ul {
+        padding-left: 1rem;
+        li {
+            list-style: disc;
+            font-size: .85rem;
+            margin-bottom: .5rem;
+            color: rgba($color: $color-black, $alpha: .7);
+        }
+    }
+}

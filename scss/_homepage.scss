@@ -1,0 +1,425 @@
+// Hero Slider 
+.hero-slider {
+    figure {
+        position: relative;
+        figcaption {
+            position: absolute;
+            top: 0;
+            width: 45%;
+            height: 100%;
+            background: rgba($color: $bima-lime-green, $alpha: .7);
+            padding-left: 14rem;
+            padding-right: 4rem;
+            display: flow-root;
+            padding-top: 17%;
+            h2 {
+                font-family: $lato-regular;
+                font-size: 1.2rem;
+                color: $color-white;
+                margin-bottom: 1rem;
+            }
+            p {
+                font-family: $lato-bold;
+                font-size: 2rem;
+                color: $color-white;
+                margin-bottom: 1rem;
+                line-height: 2.3rem;
+                &.link {
+                    max-width: 200px;
+                    display: inline-block;
+                }
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 10rem;
+        margin-top: 0 !important;
+        height: 100%;
+        background: $color-white;
+        @include flexbox;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+    }
+}
+
+// Services
+
+#services {
+    .nav-tabs {
+        .nav-item {
+            .nav-link {
+                text-decoration: none;
+                border: none;
+                i {
+                    font-size: 2.8rem;
+                    border: 3px solid $bima-lime-green;
+                    padding: 1.1rem;
+                    border-radius: 50%;
+                    color: $bima-lime-green;
+                    @include transition(all, .3s, ease-in-out);
+                    &.rotate-icon-45 {
+                        @include transform(rotate(-45deg));
+                    }
+                }
+                p {
+                    font-size: 1rem;
+                    color: $bima-lime-green;
+                    margin-top: 1rem;
+                    @include transition(all, .3s, ease-in-out);
+                }
+                &:hover {
+                    i {
+                        color: $bima-navy-blue;
+                        border-color: $bima-navy-blue;
+                    }
+                    p {
+                        color: $bima-navy-blue;
+                    }
+                }
+                &.active {
+                    i {
+                        color: $bima-navy-blue;
+                        border-color: $bima-navy-blue;
+                    }
+                    p {
+                        color: $bima-navy-blue;
+                    }
+                }
+            }
+        }
+    }
+    .tab-content {
+        .left-col {
+            figure {
+                max-width: 80%;
+                position: relative;
+                img {
+                    &.pic-one {
+                        position: relative;
+                        top: 2rem;
+                    }
+                    &.pic-two {
+                        position: absolute;
+                        top: -10px;
+                        left: 7rem;
+                        border: 10px solid $color-white;
+                        max-width: 95%;
+                    }
+                }
+            }
+        }
+        .right-col {
+            p {
+                &.desc {
+                    margin-bottom: 1.5rem;
+                    strong{
+                        color: $color-black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Who we re
+
+#who-we-are {
+    .title-wrap {
+        margin-left: -40px;
+    }
+    .card {
+        @include border-radius(0);
+        background: $transparent;
+        img {
+            @include border-radius(0);
+        }
+    }
+}
+
+
+// Team
+#team {
+    .left-col {
+        figure {
+            position: relative;
+            figcaption {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                background: rgba($color: $bima-lime-green, $alpha: .7);
+                padding: 1rem;
+                h3 {
+                    font-family: $lato-bold;
+                    color: $color-white;
+                    font-size: 1.2rem;
+                }
+                p {
+                    font-size: .85rem;
+                    color: $color-white;
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .right-col {
+        h4 {
+            font-family: $lato-bold;
+            color: $bima-navy-blue;
+            font-size: 1.3rem;
+        }
+        .progress-bar {
+            margin: 0 0 10px;
+            overflow: hidden;
+            padding-right: 24px; /* Separate bars from container */
+            background-color: $transparent;
+            text-align: left;
+        } 
+        .progress-title-holder {
+            padding-bottom: 7px;
+            position: relative;
+            margin: 5px 0;
+            font-family: $lato-bold;
+            font-size: 15px;
+            line-height: 15px;
+            font-weight: 400;
+            color: $bima-navy-blue;  
+        }
+        .progress-title {
+            z-index: 100;
+        } 
+        .progress-number-wrapper {
+            width: 100%;
+            z-index: 10;
+        }
+        .progress-number-mark {
+            margin-bottom: 4px;
+            border-radius: 3px;
+            background-color: $bima-navy-blue;
+            padding: 0 8px;
+            position: absolute;
+            bottom: 0;   
+            @include transform(translateX(-50%)); 
+        } 
+          
+        .progress-number-wrapper,
+        .progress-number-mark {
+            font-family: $lato-regular;
+            font-size: 11px;
+            line-height: 24px;
+            height: 24px;
+            letter-spacing: 0px;
+            font-weight: 600;
+            font-style: normal;
+            text-transform: none;
+            color: $color-white;
+        }   
+        .down-arrow {
+            border-left: 3px solid transparent;
+            border-right: 3px solid transparent;
+            border-top: 3px solid $bima-navy-blue;
+            position: absolute;
+            left: 50%;
+            top: 100%;
+            @include transform(translateX(-50%));
+        }
+        .progress-content-outter {
+            height: 12px;
+            background-color: lighten($color: $color-black, $amount: 90%);
+        }
+        .progress-content {
+            height: 21px;
+            background-color: $bima-navy-blue;
+            width: 0%; /* Initial value */
+        }
+    }
+}
+
+// Mid Content
+
+.mid-cont-wrap {
+    .left-col {
+        figure {
+            overflow: hidden;
+            img {
+                @include transition(all, .3s, ease-in-out);
+            }
+            &:hover {
+                img {
+                    @include transform(scale(1.1));
+                }
+            }
+            figcaption {
+                top: 0;
+                width: 100%;
+                height: 100%;
+                @include flexbox;
+                @include align-items(center);
+                @include justify-content(center);
+                p {
+                    color: $color-white;
+                    border: 2px solid $color-white;
+                    padding: 1rem 1.3rem;
+                    @include border-radius(50%);
+                }
+            }
+        }
+    }
+    .mid-col {
+        background: $bima-lime-green;
+        .text-wrap {
+            border: 3px solid $color-white;
+            margin: 2rem;
+            padding: 2rem;
+            height: calc(100% - 4rem);
+            @include flexbox;
+            @include flex-direction(column);
+            @include justify-content(center);
+            text-align: center;
+            h3 {
+                font-family: $lato-bold;
+                color: $color-white;
+                font-size: 2rem;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 30px;
+                    height: 1px;
+                    background: $color-white;
+                    margin: 1rem auto;
+                }
+            }
+            p {
+                font-family: $lato-bold;
+                font-size: .7rem;
+                color: $color-white;
+            }
+        }
+    }
+    .right-col {
+        .text-wrap {
+            height: 100%;
+            padding: 2rem;
+            text-align: center;
+            blockquote {
+                &:before {
+                    content: '\f10d';
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    font-size: 2rem;
+                    color: $bima-lime-green;
+                }
+                p {
+                    font-family: $lato-bold;
+                    font-size: 1.5rem;
+                    color: $bima-lime-green;
+                    margin-top: .5rem;
+                    line-height: 1.5rem;
+                }
+            }
+            p {
+                font-size: .8rem;
+                line-height: 1rem;
+            }
+            .auth {
+                img {
+                    max-width: 110px;
+                }
+            }
+        }
+    }
+    .gq {
+        padding: 2rem 0;
+        .left-col {
+            h2 {
+                font-family: $lato-bold;
+                font-size: 1.8rem;
+                color: $bima-navy-blue;
+            }
+        }
+        .right-col {
+            p {
+                text-align: right;
+            }
+        }
+    }
+}
+
+// Consultation
+#consultation {
+    .left-col {
+        .text-wrap {
+            max-width: 33rem;
+            margin: auto;
+            .form-control {
+                font-size: .85rem;
+                &:hover, &:focus {
+                    border-color: inherit;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+// Clients
+#clients {
+    img{
+        width: auto;
+        height: 100px;
+        display: block;
+        margin: auto;
+    }
+}
+
+// Newsletter
+#newsletter {
+    background-color: $bima-navy-blue;
+    h2 {
+        &:after {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .form-control {
+        font-size: .85rem;
+        &:hover, &:focus {
+            border-color: inherit;
+            box-shadow: none;
+        }
+    }
+    button {
+        position: absolute;
+        top: 10px;
+        font-size: 1.2rem;
+        right: 22px;
+        color: rgba($color: $color-black, $alpha: .2);
+        border-left: 1px solid rgba($color: $color-black, $alpha: .2);
+        padding-left: .5rem;
+    }
+}
+
+// Video Modal
+.video-modal {
+    .modal-dialog {
+        max-width: 800px;
+        margin: 30px auto;
+    }
+    .modal-body {
+        position:relative;
+        padding:0px;
+    }
+    .close {
+        position:absolute;
+        right:-30px;
+        top:0;
+        z-index:999;
+        font-size:2rem;
+        font-weight: normal;
+        color: $color-white;
+        opacity:1;
+    }
+}
